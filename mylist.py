@@ -1,1 +1,15 @@
-#Create any list
+#Creatfrom machine import Pin
+import time
+
+led1 = Pin(2,Pin.OUT)
+led2 = Pin(4,Pin.OUT)
+led3 = Pin(18,Pin.OUT)
+led4 = Pin(19,Pin.OUT)
+while True:
+    led_list = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+    for i in led_list:
+        led1.value(i[0])
+        led2.value(i[1])
+        led3.value(i[2])
+        led4.value(i[3])
+        time.sleep(0.1)
